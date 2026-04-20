@@ -1,0 +1,107 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #fff;
+}
+
+/* Navbar */
+.navbar {
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
+}
+.navbar-brand {
+    color: #fff !important;
+    font-weight: 600;
+}
+
+/* Hero */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+}
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+}
+.hero p {
+    color: #ccc;
+}
+
+/* Project Card */
+.project-card {
+    background: rgba(255,255,255,0.08);
+    border-radius: 20px;
+    padding: 25px;
+    backdrop-filter: blur(12px);
+    transition: 0.4s;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Glow effect */
+.project-card::before {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, #0d6efd, #6610f2, #00c6ff);
+    top: -50%;
+    left: -50%;
+    z-index: 0;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.project-card:hover::before {
+    opacity: 0.2;
+}
+
+.project-card:hover {
+    transform: translateY(-12px) scale(1.02);
+}
+
+/* Content inside card */
+.project-content {
+    position: relative;
+    z-index: 1;
+}
+
+.project-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+.project-text {
+    font-size: 0.95rem;
+    color: #ccc;
+}
+
+/* Button */
+.btn-custom {
+    border-radius: 30px;
+    padding: 8px 20px;
+    font-size: 0.9rem;
+    background: linear-gradient(45deg, #0d6efd, #6610f2);
+    border: none;
+    color: #fff;
+}
+
+.btn-custom:hover {
+    opacity: 0.9;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #aaa;
+}
+
+/* Responsive */
+@media(max-width:768px){
+    .hero h1 {
+        font-size: 2rem;
+    }
+}
